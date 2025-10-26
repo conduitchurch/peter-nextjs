@@ -42,25 +42,25 @@ const GrowMenu = () => {
           },
         }}
       >
-        <MenuItem onClick={(e) => handleClose(e, "/next-steps")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/next-steps")}>
           Next Steps
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/grow/baptism")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/baptism")}>
           Baptism
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/grow/discipleship")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/discipleship")}>
           Discipleship
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/grow/serve-team")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/serve-team")}>
           Serve Team
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/grow/small-groups")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/small-groups")}>
           Small Groups
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/prayer-wall")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/prayer-wall")}>
           Prayer Wall
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/your-story")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/your-story")}>
           Share Your Story
         </MenuItem>
       </Menu>

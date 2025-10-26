@@ -27,6 +27,16 @@ const Page = () => {
             Baptism
           </Typography>
         </Grid>
+        <Grid size={{ xs: 12, md: 8 }} offset={{ xs: 0, md: 2 }}>
+          <Typography variant="h6" textAlign="center">
+            What is Baptism?
+          </Typography>
+          <br />
+          <Typography variant="body1" textAlign="justified">
+            Baptism is an important step of obedience that shows others we have personally trusted Jesus for our salvation. Jesus was baptized when He was on the earth, and we do this to follow His example. When Christians are baptized, they are submerged under water to identify with the death and burial of Jesus and raised out of the water to identify with His resurrection.
+          </Typography>
+          <br />
+        </Grid>
       </Grid>
     </Grid>
   );

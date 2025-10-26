@@ -46,13 +46,13 @@ const Typography = (theme) => {
     subtitle1: {
       letterSpacing: "0.15px",
       fontSize: "10pt",
-      color: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
       fontFamily: fonts.subtitle.style.fontFamily,
     },
     subtitle2: {
       letterSpacing: "0.1px",
       fontSize: "12pt",
-      color: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
       fontFamily: fonts.subtitle.style.fontFamily,
     },
     body1: {

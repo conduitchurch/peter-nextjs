@@ -92,14 +92,14 @@ const DefaultPalette = (mode) => {
     divider: `rgba(${mainColor}, 0.12)`,
     background: {
       paper: mode === "light" ? "#ffffff" : "#1f1b20",
-      default: mode === "light" ? "#e5e5e5" : "#000000",
+      default: mode === "light" ? "#f8f8f8" : "#000000",
       light: {
-        paper: "#FFEDDB",
-        default: "#E8D8C8",
+        paper: "#ffffff",
+        default: "#e8e8e8",
       },
       dark: {
-        paper: "#001219",
-        default: "#000405",
+        paper: "#1f1b20",
+        default: "#000000",
       },
     },
     action: {

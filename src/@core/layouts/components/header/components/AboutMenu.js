@@ -41,27 +41,28 @@ const AboutMenu = () => {
             "aria-labelledby": "about-button",
           },
         }}
+        sx={{ textTransform: 'lowercase' }}
       >
-        <MenuItem onClick={(e) => handleClose(e, "/about")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/about")}>
           About Conduit
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/beliefs")}>Beliefs</MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/leadership")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/beliefs")}>Beliefs</MenuItem>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/leadership")}>
           Leadership
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/ministry/kids")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/kids")}>
           Conduit Kids
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/ministry/students")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/students")}>
           Overcharge Students
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/ministry/young-adults")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/young-adults")}>
           Young Adults
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/ministry/marriage-family")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/marriage-family")}>
           Marraige & Family
         </MenuItem>
-        <MenuItem onClick={(e) => handleClose(e, "/contact-us")}>
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/contact-us")}>
           Contact Us
         </MenuItem>
       </Menu>
