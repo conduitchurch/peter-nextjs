@@ -68,6 +68,7 @@ const Page = () => {
             <Accordion sx={{ border: "solid 0px transparent"}}>
               <AccordionSummary expandIcon={<ArrowDropDown />}>What is the significance of baptism?</AccordionSummary>
               <AccordionDetails sx={{ paddingLeft: 4, paddingRight: 4 }}>
+                <Typography>Water baptism is a public declaration of three very important things:</Typography>
                 <br />
                 <Typography><b>You are a follower of Jesus Christ.</b></Typography>
                 <Typography variant="subtitle1" paddingLeft={4}>
