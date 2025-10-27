@@ -7,7 +7,7 @@ const Paper = (theme) => ({
         boxShadow: "unset",
         borderBottom: `solid 4px ${theme.palette.secondary.main}`,
         borderTop: `solid 4px ${theme.palette.primary.main}`,
-      },
+      }
     },
   },
 });
