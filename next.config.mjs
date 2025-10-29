@@ -19,8 +19,8 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_VERSION: pkg_config.version,
   },
-  basePath: isProd ? "/church-plant-mfe" : "",
-  assetPrefix: isProd ? "/church-plant-mfe" : "",
+  basePath: isProd ? "" : "",
+  assetPrefix: isProd ? "" : "",
   images: isProd
     ? {
         unoptimized: true,
