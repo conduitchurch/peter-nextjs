@@ -1,6 +1,6 @@
 const themeConfig = {
   appName: "Conduit",
-  appDescription: "Conduit Church of Statesville NC",
+  appDescription: "Conduit Church",
   mode: "dark",
   contentWidth: "full",
   routingLoader: true,
