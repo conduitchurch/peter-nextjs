@@ -34,7 +34,7 @@ const PrayerTabs = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid size={3}>
+      <Grid size={{ sm: 12, md: 3 }}>
         <Card>
           <CardContent>
             <Stack>
@@ -82,7 +82,7 @@ const PrayerTabs = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid size={9}>
+      <Grid size={{ sm: 12, md: 9 }}>
         {tab === 0 && (
           <Card>
             <CardHeader title="Prayer is our first response, not our last resort." />
@@ -135,7 +135,7 @@ const PrayerTabs = () => {
               </Typography>
               <br />
               <Grid container spacing={4}>
-                <Grid size={6}>
+                <Grid size={{ sm: 12, md: 6 }}>
                   <Card sx={{ marginBottom: 4 }}>
                     <CardHeader
                       title="Selective Fast"
@@ -149,7 +149,7 @@ const PrayerTabs = () => {
                     />
                   </Card>
                 </Grid>
-                <Grid size={6}>
+                <Grid size={{ sm: 12, md: 6 }}>
                   <Card sx={{ marginBottom: 4 }}>
                     <CardHeader
                       title="Complete Fast"
