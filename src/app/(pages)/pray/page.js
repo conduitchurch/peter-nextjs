@@ -47,6 +47,6 @@ const Page = () => {
 export default Page;
 
 export const metadata = {
-  title: `Prayer Wall | ${themeConfig.appDescription}`,
+  title: `21 Days of Prayer | ${themeConfig.appDescription}`,
   description: themeConfig.appDescription,
 };
