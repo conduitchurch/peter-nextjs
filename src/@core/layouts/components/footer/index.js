@@ -172,7 +172,7 @@ const Footer = () => {
       >
         <Box sx={{ textAlign: isMobile ? "center" : "right" }}>
           <img
-            src={`${nextConfig.assetPrefix}/images/CC2.svg`}
+            src={`${nextConfig.assetPrefix}/images/logo.svg`}
             alt="logo"
             style={{ width: "100%", height: "auto", opacity: '50%' }}
           />

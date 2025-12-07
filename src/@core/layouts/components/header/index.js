@@ -61,7 +61,7 @@ const Header = () => {
         >
           <Link href="/" sx={{ height: 50, width: 50, textDecoration: "none !important" }} component={NextLink}>
             <img
-              src={`${nextConfig.assetPrefix}/images/CC2.svg`}
+              src={`${nextConfig.assetPrefix}/images/logo.svg`}
               alt="Conduit Church"
               height={50}
             />
