@@ -49,6 +49,8 @@ const MobileMenu = () => {
       >
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/about")}>About</MenuItem>
         <Divider variant="middle" flexItem />
+        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/give")}>Give</MenuItem>
+        <Divider variant="middle" flexItem />
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/beliefs")}>Beliefs</MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/leadership")}>
           Leadership
@@ -91,7 +93,6 @@ const MobileMenu = () => {
         <Divider variant="middle" flexItem />
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/visit")}>Visit</MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/events")}>Events</MenuItem>
-        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/give")}>Give</MenuItem>
         <Divider variant="middle" flexItem />
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/contact-us")}>
           Contact Us
