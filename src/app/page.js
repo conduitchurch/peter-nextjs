@@ -85,8 +85,8 @@ const Home = () => {
             }}
           >
             <img
-              src={`${nextConfig.assetPrefix}/images/Prayer_edited.avif`}
-              alt="Community Worship"
+              src={`${nextConfig.assetPrefix}/images/serving.jpg`}
+              alt="Serving"
               height={300}
               width={300}
               style={{ objectFit: 'cover' }}
