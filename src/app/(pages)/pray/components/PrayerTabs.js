@@ -107,7 +107,8 @@ const PrayerTabs = () => {
         )}
         {tab === 1 && (
           <Card>
-            <CardHeader title="Fellowship Online" subheader="Coming Soon!" />
+            <CardHeader title="Fellowship Online" subheader="With Church of the Highlands in Alabama!" />
+            <CardContent component='iframe' src="https://21days.churchofthehighlands.com/media" height={800}/>
           </Card>
         )}
         {tab === 2 && (

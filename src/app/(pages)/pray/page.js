@@ -37,6 +37,19 @@ const Page = () => {
           <br />
         </Grid>
         <Grid size={12}>
+          <Box
+            sx={{
+              backgroundImage: 'url(https://cdn.sanity.io/images/2uj21qja/production/3d5a5bf900f9095c70de86b3a87bc23f6acf515b-2250x2250.jpg)',
+              height: '700px',
+              width: '100%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPositionY: 'center',
+              backgroundPositionX: 'center',
+              backgroundSize: '100%',
+              borderRadius: '2px'
+            }} />
+        </Grid>
+        <Grid size={12}>
             <PrayerTabs />
         </Grid>
       </Grid>
