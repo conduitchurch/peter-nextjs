@@ -86,7 +86,10 @@ const Header = () => {
             }}
           >
             <AboutMenu />
-            <GrowMenu />
+            {/* <GrowMenu /> */}
+            <Link href="/next-steps" title="Grow" component={NextLink}>
+              <Button sx={{ textTransform: 'lowercase' }}>Grow</Button>
+            </Link>
             <Link href="/visit" title="Visit" component={NextLink}>
               <Button variant="outlined" sx={{ textTransform: 'lowercase' }}>Visit</Button>
             </Link>

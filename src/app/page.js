@@ -9,20 +9,21 @@ import {
   Paper,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
+import NextLink from "next/link";
 
 const Home = () => {
   return (
     <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
       <Grid size={12}>
         <img
-          src={`${nextConfig.assetPrefix}/images/home_hero.avif`}
+          src={`${nextConfig.assetPrefix}/images/lake_norman.jpg`}
           alt="Bible and Coffee"
-          style={{ maxWidth: "100%", height: "auto", filter: 'hue-rotate(200deg) grayscale(10%) blur(2px)' }}
+          style={{ maxWidth: "100%", height: "auto" }}
         />
       </Grid>
       <Grid size={10} offset={1} sx={{ zIndex: 1 }}>
         <Grid container spacing={3}>
-          <Grid size={{ xs: 12, md: 4 }} component={Card}>
+          <Grid size={{ xs: 12, md: 5 }} component={Card} offset={{ xs: 0, md: 1 }}>
             <CardHeader title="Plan your Visit" />
             <CardContent>
               <Typography variant="body1">
@@ -30,10 +31,12 @@ const Home = () => {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              <Button variant="contained">Meet with us</Button>
+              <NextLink href='/visit' title='Meet with us'>
+                <Button variant="contained">Meet with us</Button>
+              </NextLink>
             </CardActions>
           </Grid>
-          <Grid size={{ xs: 12, md: 4 }} component={Card}>
+          {/* <Grid size={{ xs: 12, md: 4 }} component={Card}>
             <CardHeader title="Recent Messages" />
             <CardContent>
               <Typography variant="body1">
@@ -43,8 +46,8 @@ const Home = () => {
             <CardActions disableSpacing>
               <Button variant="contained">Watch Now</Button>
             </CardActions>
-          </Grid>
-          <Grid size={{ xs: 12, md: 4 }} component={Card}>
+          </Grid> */}
+          {/* <Grid size={{ xs: 12, md: 4 }} component={Card}>
             <CardHeader title="One Year Bible" />
             <CardContent>
               <Typography variant="body1">
@@ -53,6 +56,19 @@ const Home = () => {
             </CardContent>
             <CardActions disableSpacing>
               <Button variant="contained">Start Reading</Button>
+            </CardActions>
+          </Grid> */}
+          <Grid size={{ xs: 12, md: 5 }} component={Card}>
+            <CardHeader title="21 Days of Prayer" />
+            <CardContent>
+              <Typography variant="body1">
+                Spend time in God's Word with this daily Bible reading plan.
+              </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+              <NextLink href='/pray' title='Learn More'>
+                <Button variant="contained">Learn More</Button>
+              </NextLink>
             </CardActions>
           </Grid>
         </Grid>

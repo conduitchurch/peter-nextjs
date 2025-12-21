@@ -44,15 +44,15 @@ const Page = () => {
         <Card component={Grid} size={{ xs: 12, md: 6 }}>
           <CardHeader
             title="Water Baptism"
-            subheader={
-              <Link
-                component={NextLink}
-                href="/grow/baptism"
-                title="Water Baptism"
-              >
-                Learn More
-              </Link>
-            }
+            // subheader={
+            //   <Link
+            //     component={NextLink}
+            //     href="/grow/baptism"
+            //     title="Water Baptism"
+            //   >
+            //     Learn More
+            //   </Link>
+            // }
             slotProps={{
               title: { variant: "h4" },
             }}
@@ -66,15 +66,15 @@ const Page = () => {
         <Card component={Grid} size={{ xs: 12, md: 6 }}>
           <CardHeader
             title="Discipleship"
-            subheader={
-              <Link
-                component={NextLink}
-                href="/grow/discipleship"
-                title="Discipleship"
-              >
-                Learn More
-              </Link>
-            }
+            // subheader={
+            //   <Link
+            //     component={NextLink}
+            //     href="/grow/discipleship"
+            //     title="Discipleship"
+            //   >
+            //     Learn More
+            //   </Link>
+            // }
             slotProps={{
               title: { variant: "h4" },
             }}
@@ -88,15 +88,15 @@ const Page = () => {
         <Card component={Grid} size={{ xs: 12, md: 6 }}>
           <CardHeader
             title="Serve Team"
-            subheader={
-              <Link
-                component={NextLink}
-                href="/grow/serve-team"
-                title="Serve Team"
-              >
-                Learn More
-              </Link>
-            }
+            // subheader={
+            //   <Link
+            //     component={NextLink}
+            //     href="/grow/serve-team"
+            //     title="Serve Team"
+            //   >
+            //     Learn More
+            //   </Link>
+            // }
             slotProps={{
               title: { variant: "h4" },
             }}
@@ -110,15 +110,15 @@ const Page = () => {
         <Card component={Grid} size={{ xs: 12, md: 6 }}>
           <CardHeader
             title="Small groups"
-            subheader={
-              <Link
-                component={NextLink}
-                href="/grow/small-groups"
-                title="Small groups"
-              >
-                Learn More
-              </Link>
-            }
+            // subheader={
+            //   <Link
+            //     component={NextLink}
+            //     href="/grow/small-groups"
+            //     title="Small groups"
+            //   >
+            //     Learn More
+            //   </Link>
+            // }
             slotProps={{
               title: { variant: "h4" },
             }}

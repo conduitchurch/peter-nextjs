@@ -29,10 +29,17 @@ const Page = () => {
           >{`About ${themeConfig.appName}`}</Typography>
         </Grid>
         <Grid size={12}>
-          <img
-            src={`${nextConfig.assetPrefix}/images/about.webp`}
-            alt="About Us"
-            style={{ width: "100%", height: "auto" }}
+          <Box
+            sx={{
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/conduit_setup.jpg)`,
+              height: '700px',
+              width: '100%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPositionY: 'center',
+              backgroundPositionX: 'center',
+              backgroundSize: '100%',
+              borderRadius: '2px'
+            }}
           />
         </Grid>
         <Card component={Grid} size={12}>
