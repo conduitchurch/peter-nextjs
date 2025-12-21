@@ -7,6 +7,7 @@ import {
   Typography,
   Button,
   Paper,
+  Box,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
 import NextLink from "next/link";
@@ -15,11 +16,27 @@ const Home = () => {
   return (
     <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
       <Grid size={12}>
-        <img
+        <Box
+          sx={{
+              padding: 0,
+              margin: 0,
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/lake_norman.jpg)`,
+              height: '30vw',
+              width: '100%',
+              minHeight: '30vh',
+              backgroundRepeat: 'no-repeat',
+              backgroundPositionY: 'center',
+              backgroundPositionX: 'center',
+              // backgroundSize: '100%',
+              borderRadius: '2px',
+              objectFit: 'cover'
+            }}
+        />
+        {/* <img
           src={`${nextConfig.assetPrefix}/images/lake_norman.jpg`}
           alt="Bible and Coffee"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+          style={{ maxWidth: "100%", height: "auto", minHeight: '39vh' }}
+        /> */}
       </Grid>
       <Grid size={10} offset={1} sx={{ zIndex: 1 }}>
         <Grid container spacing={3}>

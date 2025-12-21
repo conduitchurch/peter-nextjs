@@ -32,13 +32,15 @@ const Page = () => {
           <Box
             sx={{
               backgroundImage: `url(${nextConfig.assetPrefix}/images/conduit_setup.jpg)`,
-              height: '700px',
+              height: '80vw',
+              maxHeight: '700px',
               width: '100%',
               backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'center',
+              backgroundPositionY: 'top',
               backgroundPositionX: 'center',
               backgroundSize: '100%',
-              borderRadius: '2px'
+              borderRadius: '2px',
+              objectFit: 'cover'
             }}
           />
         </Grid>
