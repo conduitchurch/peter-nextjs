@@ -27,6 +27,19 @@ const Page = () => {
             Visit {themeConfig.appName}
           </Typography>
         </Grid>
+        <Grid size={12}>
+          <Card>
+            <CardContent>
+              <Typography variant='h4' align='center'>Join us for worship and fellowship!</Typography>
+              <br />
+              <Typography variant='h6' align='center'>Each Sunday at 3pm EST</Typography>
+              <Typography variant='h6' align='center'>At the Troutman Event Center!</Typography><br />
+              <Typography variant='body1' align='center'>105 N Main St Troutman, NC 28166</Typography>
+              <Typography variant='body1' align='center'>Troutman, NC 28166</Typography>
+
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
     </Grid>
   );
