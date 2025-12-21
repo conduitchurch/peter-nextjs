@@ -49,12 +49,12 @@ const Footer = () => {
               <Typography variant="caption">Beliefs</Typography>
             </Link>
           </ListItem>
-          <ListItem>
+          {/* <ListItem>
             <Link href="/leadership" title="Leadership" component={NextLink}>
               <Typography variant="caption">Leadership</Typography>
             </Link>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Link
               href="/ministry/kids"
               title="Conduit Kids"
@@ -62,8 +62,8 @@ const Footer = () => {
             >
               <Typography variant="caption">Conduit Kids</Typography>
             </Link>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Link
               href="/ministry/students"
               title="Overcharge Students"
@@ -71,8 +71,8 @@ const Footer = () => {
             >
               <Typography variant="caption">Overcharge Students</Typography>
             </Link>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Link
               href="/ministry/young-adults"
               title="Young Adults"
@@ -80,8 +80,8 @@ const Footer = () => {
             >
               <Typography variant="caption">Young Adults</Typography>
             </Link>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Link
               href="/ministry/marriage-family"
               title="Marriage and Family"
@@ -89,12 +89,12 @@ const Footer = () => {
             >
               <Typography variant="caption">Marriage and Family</Typography>
             </Link>
-          </ListItem>
-          <ListItem>
+          </ListItem> */}
+          {/* <ListItem>
             <Link href="/contact-us" title="Contact Us" component={NextLink}>
               <Typography variant="caption">Contact Us</Typography>
             </Link>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Grid>
       <Grid size={{ xs: 6, md: 3, lg: 2 }}>
@@ -113,6 +113,11 @@ const Footer = () => {
             </Link>
           </ListItem>
           <ListItem>
+            <Link href="/give" title="Give" component={NextLink}>
+              <Typography variant="caption">Give</Typography>
+            </Link>
+          </ListItem>
+          {/* <ListItem>
             <Link href="/grow/baptism" title="Baptism" component={NextLink}>
               <Typography variant="caption">Baptism</Typography>
             </Link>
@@ -156,8 +161,8 @@ const Footer = () => {
               component={NextLink}
             >
               <Typography variant="caption">Share Your Story</Typography>
-            </Link>
-          </ListItem>
+            </Link> 
+          </ListItem> */}
         </List>
       </Grid>
       <Grid
@@ -174,7 +179,7 @@ const Footer = () => {
           <img
             src={`${nextConfig.assetPrefix}/images/logo.svg`}
             alt="logo"
-            style={{ width: "100%", height: "auto", opacity: '50%' }}
+            style={{ width: "50%", height: "auto", opacity: '50%' }}
           />
         </Box>
         <Box

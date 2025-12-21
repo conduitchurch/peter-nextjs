@@ -48,11 +48,11 @@ const MobileMenu = () => {
         }}
       >
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/about")}>About</MenuItem>
-        <Divider variant="middle" flexItem />
+        {/* <Divider variant="middle" flexItem /> */}
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/give")}>Give</MenuItem>
-        <Divider variant="middle" flexItem />
+        {/* <Divider variant="middle" flexItem /> */}
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/beliefs")}>Beliefs</MenuItem>
-        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/leadership")}>
+        {/* <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/leadership")}>
           Leadership
         </MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/kids")}>
@@ -66,13 +66,13 @@ const MobileMenu = () => {
         </MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/ministry/marriage-family")}>
           Marriage & Family
-        </MenuItem>
-        <Divider variant="middle" flexItem />
-        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow")}>Grow</MenuItem>
+        </MenuItem> */}
+        {/* <Divider variant="middle" flexItem /> */}
+        {/* <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow")}>Grow</MenuItem> */}
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/next-steps")}>
           Next Steps
         </MenuItem>
-        <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/baptism")}>
+        {/* <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/baptism")}>
           Baptism
         </MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/grow/discipleship")}>
@@ -89,14 +89,14 @@ const MobileMenu = () => {
         </MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/your-story")}>
           Share Your Story
-        </MenuItem>
-        <Divider variant="middle" flexItem />
+        </MenuItem> */}
+        {/* <Divider variant="middle" flexItem /> */}
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/visit")}>Visit</MenuItem>
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/events")}>Events</MenuItem>
-        <Divider variant="middle" flexItem />
+        {/* <Divider variant="middle" flexItem />
         <MenuItem sx={{ textTransform: 'lowercase' }} onClick={(e) => handleClose(e, "/contact-us")}>
           Contact Us
-        </MenuItem>
+        </MenuItem> */}
       </Menu>
     </>
   );
