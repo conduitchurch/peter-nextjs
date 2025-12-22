@@ -10,7 +10,7 @@ import themeConfig from "@/configs/themeConfig";
 
 const initialThemeSettings = {
   themeColor: "primary",
-  mode: "light",
+  mode: themeConfig.mode,
   contentWidth: 800,
 };
 

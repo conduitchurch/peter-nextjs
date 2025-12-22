@@ -1,7 +1,7 @@
 const themeConfig = {
   appName: "Conduit",
   appDescription: "Conduit Church",
-  mode: "dark",
+  mode: "light",
   contentWidth: "full",
   routingLoader: true,
   menuTextTruncate: true,
