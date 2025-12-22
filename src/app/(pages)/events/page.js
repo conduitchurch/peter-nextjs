@@ -13,12 +13,10 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import nextConfig from "next.config.mjs";
 
-const events = [
-  { id: 'comm_122125', src: `${nextConfig.assetPrefix}/images/communion.jpg`, title: 'Communion', subheader: 'Dec 21'},
-  { id: '21dop_26', src: 'https://cdn.sanity.io/images/2uj21qja/production/3d5a5bf900f9095c70de86b3a87bc23f6acf515b-2250x2250.jpg', title: '21 Days of Prayer', subheader: 'Jan 4 - Jan 26', learnMore: '/pray'}
-]
+import Events from '@/configs/events.js'
+
+const now = new Date()
 
 const Page = () => {
   return (
@@ -34,24 +32,40 @@ const Page = () => {
             Events
           </Typography>
         </Grid>
-        { events.map((event, index) => (
-          <Grid size={{ xs: 12, md: 4, lg: 3 }} key={event.id}>
-            <Card>
-              <CardMedia image={event.src} sx={{ height: 200 }} />
-              <CardHeader title={event.title} subheader={event.subheader} />
-              <CardActions>
-                { event?.learnMore && (
-                  <NextLink href={event.learnMore} title={event.title}>
-                    <Button variant='contained' color='secondary'>Learn More</Button>
-                  </NextLink>
-                )}
-                { event?.comingSoon && (
-                  <Button disabled variant='contained' color='secondary'>Coming Soon!</Button>
-                )}
-              </CardActions>
-            </Card>
+        <Grid size={12} container alignItems='stretch'>
+          { Events.filter(event => now < event.timestamp).map((event, index) => (
+            <Grid size={{ xs: 12, md: 4, lg: 3 }} key={event.id} display='flex'>
+              <Card sx={{ width: '100%' }}>
+                <CardMedia image={event.src} sx={{ height: 200 }} />
+                <CardHeader title={event.title} subheader={event.subheader} />
+                <CardActions disableSpacing sx={{ display: 'flex', justifyContent: 'right' }}>
+                  { event?.learnMore && (
+                    <NextLink href={event.learnMore} title={event.title}>
+                      <Button variant='contained' color='secondary' size='small'>Learn More</Button>
+                    </NextLink>
+                  )}
+                  { event?.comingSoon && (
+                    <Button disabled variant='contained' color='secondary' size='small'>Coming Soon!</Button>
+                  )}
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
           </Grid>
-        ))}
+          <Grid size={12}>
+            <Divider variant='middle' />
+          </Grid>
+          <Grid size={12} container alignItems='stretch'>
+          { Events.filter(event => now > event.timestamp).map((event, index) => (
+            <Grid size={{ xs: 12, md: 4, lg: 3 }} key={event.id} display='flex'>
+              <Card sx={{ opacity: 0.5, width: '100%' }}>
+                <CardMedia image={event.src} sx={{ height: 200 }} />
+                <CardHeader title={event.title} subheader={event.subheader} />
+                <CardActions disableSpacing></CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Grid>
   );

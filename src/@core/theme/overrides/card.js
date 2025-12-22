@@ -20,7 +20,7 @@ const Card = (theme) => ({
   MuiCardHeader: {
     styleOverrides: {
       root: {
-        padding: theme.spacing(5),
+        padding: theme.spacing(3),
         "& + .MuiCardContent-root, & + .MuiCollapse-root .MuiCardContent-root":
           {
             paddingTop: 0,
@@ -35,9 +35,10 @@ const Card = (theme) => ({
   MuiCardContent: {
     styleOverrides: {
       root: {
-        padding: theme.spacing(5),
+        padding: theme.spacing(3),
         "& + .MuiCardContent-root": {
           paddingTop: 0,
+          paddingBottom: 0,
         },
         "& + .MuiCardActions-root": {
           paddingTop: 0,
@@ -48,9 +49,10 @@ const Card = (theme) => ({
   MuiCardActions: {
     styleOverrides: {
       root: {
-        padding: theme.spacing(5),
+        paddingLeft: theme.spacing(4),
+        paddingRight: theme.spacing(4),
         "& .card-action-dense": {
-          padding: theme.spacing(0, 2.5, 2.5),
+          // padding: theme.spacing(0, 2.5, 2.5),
           ".MuiCard-root .MuiCardMedia-root + &": {
             paddingTop: theme.spacing(2.5),
           },
