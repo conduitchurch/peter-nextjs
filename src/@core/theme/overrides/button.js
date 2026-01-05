@@ -31,10 +31,7 @@ const Button = (theme) => ({
       },
       text: {
         color: theme.palette.text.primary,
-      },
-      endIcon: {
-        marginLeft: 0,
-      },
+      }
     },
   },
   MuiButtonBase: {

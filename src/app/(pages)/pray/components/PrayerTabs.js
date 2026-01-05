@@ -25,7 +25,7 @@ import {
   Typography,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
-import { Close } from "@mui/icons-material";
+import { Close, Launch } from "@mui/icons-material";
 import FastingScripture from "./FastingScripture";
 import ResourcesTable from "./ResourcesTable";
 
@@ -49,13 +49,29 @@ const PrayerTabs = () => {
                 </Button>
               </ListItem>
               <ListItem>
+                <NextLink
+                  href='https://live.churchofthehighlands.com/'
+                  target="_blank"
+                  title='Fellowship Live (7am - 8amEST)'
+                >
+                <Button
+                  variant="contained"
+                  size="small"
+                  endIcon={<Launch />}
+                  
+                >
+                  Fellowship Live
+                </Button>
+                </NextLink>
+              </ListItem>
+              <ListItem>
                 <Button
                   variant="contained"
                   size="small"
                   onClick={() => setTab(1)}
                   color={tab === 1 ? "secondary" : undefined}
                 >
-                  Fellowship Online
+                  Live Fellowship Library
                 </Button>
               </ListItem>
               <ListItem>
