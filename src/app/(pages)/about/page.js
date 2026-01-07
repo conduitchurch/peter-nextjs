@@ -31,7 +31,7 @@ const Page = () => {
         <Grid size={12}>
           <Box
             sx={{
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/conduit_setup.jpg)`,
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/friends.jpg)`,
               height: '80vw',
               maxHeight: '700px',
               width: '100%',

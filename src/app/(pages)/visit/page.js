@@ -28,6 +28,22 @@ const Page = () => {
           </Typography>
         </Grid>
         <Grid size={12}>
+          <Box
+            sx={{
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/community.jpg)`,
+              height: '80vw',
+              maxHeight: '700px',
+              width: '100%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPositionY: 'top',
+              backgroundPositionX: 'center',
+              backgroundSize: '100%',
+              borderRadius: '2px',
+              objectFit: 'cover'
+            }}
+          />
+        </Grid>
+        <Grid size={12}>
           <Card>
             <CardContent>
               <Typography variant='h4' align='center'>Join us for worship and fellowship!</Typography>

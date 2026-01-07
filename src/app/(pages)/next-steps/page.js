@@ -27,6 +27,22 @@ const Page = () => {
             Next Steps
           </Typography>
         </Grid>
+        <Grid size={12}>
+          <Box
+            sx={{
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/serve_team.jpg)`,
+              height: '80vw',
+              maxHeight: '700px',
+              width: '100%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPositionY: 'top',
+              backgroundPositionX: 'center',
+              backgroundSize: '100%',
+              borderRadius: '2px',
+              objectFit: 'cover'
+            }}
+          />
+        </Grid>
         <Grid size={{ xs: 12, md: 8 }} offset={{ xs: 0, md: 2 }}>
           <Typography variant="h6" textAlign="center">
             Are you ready to step out in faith?

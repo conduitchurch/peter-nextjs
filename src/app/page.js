@@ -20,23 +20,18 @@ const Home = () => {
           sx={{
               padding: 0,
               margin: 0,
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/lake_norman.jpg)`,
-              height: '30vw',
+              backgroundImage: `url(${nextConfig.assetPrefix}/images/church_2.jpg)`,
+              height: 'auto',
               width: '100%',
-              minHeight: '30vh',
+              minHeight: '70vh',
               backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'center',
+              backgroundPositionY: '30%',
               backgroundPositionX: 'center',
-              // backgroundSize: '100%',
+              backgroundSize: '100%',
               borderRadius: '2px',
               objectFit: 'cover'
             }}
         />
-        {/* <img
-          src={`${nextConfig.assetPrefix}/images/lake_norman.jpg`}
-          alt="Bible and Coffee"
-          style={{ maxWidth: "100%", height: "auto", minHeight: '39vh' }}
-        /> */}
       </Grid>
       <Grid size={10} offset={1} sx={{ zIndex: 1 }}>
         <Grid container spacing={3} alignItems='stretch'>
@@ -110,7 +105,7 @@ const Home = () => {
             }}
           >
             <img
-              src={`${nextConfig.assetPrefix}/images/serving.jpg`}
+              src={`${nextConfig.assetPrefix}/images/sermon_1.png`}
               alt="Serving"
               height={300}
               width={300}
@@ -118,7 +113,7 @@ const Home = () => {
             />
           </Grid>
           <Grid
-            size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 6 }}
+            size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 5 }}
             sx={{
               display: "flex",
               justifyContent: "flex-start",
