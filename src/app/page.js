@@ -11,7 +11,9 @@ import {
   Button,
   Paper,
   styled,
-  Box
+  Box,
+  useTheme,
+  useMediaQuery
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
 import NextLink from "next/link";
@@ -24,9 +26,12 @@ const Slide = styled("img")(({ theme }) => ({
 }));
 
 const Home = () => {
+
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
-      <Grid size={12}>
+      <Grid size={12} marginTop={isMobile ? 10 : null}>
         <Carousel
           slides={[
             <Slide src="images/church_2.jpg" style={{ objectPosition: '50% 30%' }} />,
