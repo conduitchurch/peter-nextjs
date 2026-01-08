@@ -1,3 +1,6 @@
+"use client";
+
+import Carousel from "@/@core/components/Carousel";
 import {
   Card,
   CardActions,
@@ -7,36 +10,39 @@ import {
   Typography,
   Button,
   Paper,
-  Box,
+  styled,
+  Box
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
 import NextLink from "next/link";
+
+const Slide = styled("img")(({ theme }) => ({
+  height: "auto",
+  width: "100%",
+  objectFit: "cover",
+  maxHeight: '70vh'
+}));
 
 const Home = () => {
   return (
     <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
       <Grid size={12}>
-        <Box
-          sx={{
-              padding: 0,
-              margin: 0,
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/church_2.jpg)`,
-              height: 'auto',
-              width: '100%',
-              minHeight: '70vh',
-              backgroundRepeat: 'no-repeat',
-              backgroundPositionY: '30%',
-              backgroundPositionX: 'center',
-              backgroundSize: '100%',
-              borderRadius: '2px',
-              objectFit: 'cover'
-            }}
+        <Carousel
+          slides={[
+            <Slide src="images/church_2.jpg" style={{ objectPosition: '50% 30%' }} />,
+            <Slide src="images/worship_1.jpg" style={{ objectPosition: '50% 0%' }} />,
+            <Slide src="images/family.jpg" style={{ objectPosition: '50% 30%' }} />,
+          ]}
         />
       </Grid>
       <Grid size={10} offset={1} sx={{ zIndex: 1 }}>
-        <Grid container spacing={3} alignItems='stretch'>
-          <Grid size={{ xs: 12, md: 5 }} offset={{ xs: 0, md: 1 }} display='flex'>
-            <Card sx={{ width: '100%' }}>
+        <Grid container spacing={3} alignItems="stretch">
+          <Grid
+            size={{ xs: 12, md: 5 }}
+            offset={{ xs: 0, md: 1 }}
+            display="flex"
+          >
+            <Card sx={{ width: "100%" }}>
               <CardHeader title="Plan your Visit" />
               <CardContent>
                 <Typography variant="body1">
@@ -44,7 +50,7 @@ const Home = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <NextLink href='/visit' title='Meet with us'>
+                <NextLink href="/visit" title="Meet with us">
                   <Button variant="contained">Meet with us</Button>
                 </NextLink>
               </CardActions>
@@ -76,19 +82,19 @@ const Home = () => {
             </CardActions>
             </Card>
           </Grid> */}
-          <Grid size={{ xs: 12, md: 5 }} display='flex'>
-            <Card sx={{ width: '100%' }}>
-            <CardHeader title="21 Days of Prayer" />
-            <CardContent>
-              <Typography variant="body1">
-                Prayer is our first response, not our last resort.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <NextLink href='/pray' title='Learn More'>
-                <Button variant="contained">Learn More</Button>
-              </NextLink>
-            </CardActions>
+          <Grid size={{ xs: 12, md: 5 }} display="flex">
+            <Card sx={{ width: "100%" }}>
+              <CardHeader title="21 Days of Prayer" />
+              <CardContent>
+                <Typography variant="body1">
+                  Prayer is our first response, not our last resort.
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <NextLink href="/pray" title="Learn More">
+                  <Button variant="contained">Learn More</Button>
+                </NextLink>
+              </CardActions>
             </Card>
           </Grid>
         </Grid>
@@ -104,13 +110,13 @@ const Home = () => {
               alignItems: "center",
             }}
           >
-            <img
-              src={`${nextConfig.assetPrefix}/images/sermon_1.png`}
-              alt="Serving"
-              height={300}
-              width={300}
-              style={{ objectFit: 'cover' }}
-            />
+            <Box sx={{ height: 300, width: 300, overflow: 'hidden' }}>
+              <img
+                src={`${nextConfig.assetPrefix}/images/pastor.jpg`}
+                alt="Preaching"
+                style={{ height: '150%', width: 'auto', marginLeft: '-53%', marginTop: '-20%' }}
+              />
+            </Box>
           </Grid>
           <Grid
             size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 5 }}
@@ -121,9 +127,10 @@ const Home = () => {
             }}
           >
             <Typography variant="h6">
-              Our mission is to make disciples who are deeply connected to Christ and each other;
-              who are empowered by the Holy Spirit to love boldly;
-              who are equipped to serve as conduits of God's love to a broken world.
+              Our mission is to make disciples who are deeply connected to
+              Christ and each other; who are empowered by the Holy Spirit to
+              love boldly; who are equipped to serve as conduits of God's love
+              to a broken world.
             </Typography>
           </Grid>
         </Grid>
