@@ -213,7 +213,7 @@ const Footer = () => {
       </Grid>
       <Grid size={12}>
         <Divider sx={{ textAlign: "right" }}>
-          &copy; {themeConfig.appName} Church 2025
+          &copy; {themeConfig.appName} Church { (new Date()).getFullYear() }
         </Divider>
       </Grid>
     </Grid>
