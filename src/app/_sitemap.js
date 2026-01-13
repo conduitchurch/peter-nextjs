@@ -40,5 +40,10 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'never',
     },
+    {
+      url: 'https://theconduit.church/robots.txt',
+      lastModified: new Date(),
+      changeFrequency: 'never',
+    },
   ]
 }
