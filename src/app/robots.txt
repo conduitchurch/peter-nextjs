@@ -1,0 +1,171 @@
+# =========================
+# theconduit.church
+# Purpose: Search engines & AI only
+# =========================
+
+# --- Google ---
+User-agent: Googlebot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Googlebot-Image
+Allow: /images/logo.svg
+Allow: /pwa
+Disallow: /
+
+User-agent: AdsBot-Google
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# --- Bing / Microsoft ---
+User-agent: Bingbot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: AdIdxBot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# --- Apple ---
+User-agent: Applebot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# --- DuckDuckGo ---
+User-agent: DuckDuckBot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# --- Social media previews (keep previews working) ---
+User-agent: facebookexternalhit
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Facebot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Twitterbot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Slackbot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Discordbot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: WhatsApp
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: TelegramBot
+Allow: /
+Allow: /images/logo.svg
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# --- AI / LLM training bots ---
+
+User-agent: GPTBot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: CCBot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Anthropic-ai
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: YouBot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /documents
+Disallow: /images
+Disallow: /pwa
+
+# =========================
+# Default: block everything else
+# =========================
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://theconduit.church/sitemap.xml
