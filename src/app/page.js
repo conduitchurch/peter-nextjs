@@ -32,30 +32,19 @@ const Home = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <>
-      <Head>
-        <link
-          rel='preload'
-          href='https://theconduit.church/images/church_2.jpg'
-          as='image'
-        />
-        <link
-          rel='preload'
-          href='https://theconduit.church/images/worship_1.jpg'
-          as='image'
-        />
-        <link
-          rel='preload'
-          href='https://theconduit.church/images/family.jpg'
-          as='image'
-        />
-      </Head>
       <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
         <Grid size={12} marginTop={isMobile ? 10 : null}>
           <Carousel
             slides={[
               <Slide src="images/church_2.jpg" style={{ objectPosition: '50% 30%' }} />,
               <Slide src="images/worship_1.jpg" style={{ objectPosition: '50% 0%' }} />,
+              <Slide src="images/kids_min_3.jpg" style={{ objectPosition: '50% 25%' }} />,
+              <Slide src="images/church_1.jpg" style={{ objectPosition: '50% 30%' }} />,
+              <Slide src="images/praise_2.jpg" style={{ objectPosition: '50% 20%' }} />,
+              <Slide src="images/sermon_1.jpg" style={{ objectPosition: '50% 30%' }} />,
               <Slide src="images/family.jpg" style={{ objectPosition: '50% 30%' }} />,
+              <Slide src="images/praise_1.jpg" style={{ objectPosition: '50% 5%' }} />,
+              <Slide src="images/sermon_2.jpg" style={{ objectPosition: '50% 60%' }} />,
             ]}
           />
         </Grid>
