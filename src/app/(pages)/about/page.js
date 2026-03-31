@@ -118,7 +118,7 @@ const Page = () => {
             <Typography variant="body1">
               One of the ways God designed for us to live in freedom is to have
               people in our life to help us in the journey. Connecting with
-              others in Highlands Small Groups is a practical and enjoyable way
+              others in Conduit Small Groups is a practical and enjoyable way
               to find that kind of life-changing community.
             </Typography>
           </CardContent>
@@ -142,10 +142,9 @@ const Page = () => {
           <CardContent>
             <Typography variant="body1">
               We're all an important part of God's plan, and our life will never
-              make sense until we discover our purpose. The Highlands Growth
+              make sense until we discover our purpose. The Conduit Growth
               Track is designed to help us take steps in the important process
-              of discovering our purpose, and there are opportunities to attend
-              weekly at every Highlands location.
+              of discovering our purpose.
             </Typography>
           </CardContent>
         </Card>
@@ -169,10 +168,9 @@ const Page = () => {
             <Typography variant="body1">
               This is God's ultimate plan for our life--to make a difference in
               the lives of others. When we do, the Bible tells us we will
-              experience joy. Through the Highlands Dream Team, we hope to
-              connect every person to an opportunity to live out their calling
-              by using their gifts and talents to serve others in the church and
-              the community.
+              experience joy. We hope to connect every person to an 
+              opportunity to live out their calling by using their gifts 
+              and talents to serve others in the church and the community.
             </Typography>
           </CardContent>
         </Card>
