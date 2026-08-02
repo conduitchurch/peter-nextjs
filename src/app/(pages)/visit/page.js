@@ -12,6 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
+import Photos from "@/constants";
+const visitImage = Photos.visit.mainImage;
 
 const Page = () => {
   return (
@@ -27,32 +29,59 @@ const Page = () => {
             Visit {themeConfig.appName}
           </Typography>
         </Grid>
-        <Grid size={12}>
-          <Box
-            sx={{
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/community.jpg)`,
-              height: '80vw',
-              maxHeight: '700px',
-              width: '100%',
-              backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'top',
-              backgroundPositionX: 'center',
-              backgroundSize: '100%',
-              borderRadius: '2px',
-              objectFit: 'cover'
-            }}
-          />
+        <Grid
+          size={12}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <picture>
+            <source
+              type="image/avif"
+              srcSet={visitImage.avif.set}
+              // sizes="(max-width: 600px) 90v, 800px"
+            />
+            <source
+              type="image/webp"
+              srcSet={visitImage.webp.set}
+              // sizes="(max-width: 600px) 90v, 800px"
+            />
+            <img
+              src={visitImage.jpg}
+              style={{
+                height: "80vw",
+                maxHeight: "700px",
+                width: "auto",
+                borderRadius: "2px",
+              }}
+              alt={visitImage.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </Grid>
         <Grid size={12}>
           <Card>
             <CardContent>
-              <Typography variant='h4' align='center'>Join us for worship and fellowship!</Typography>
+              <Typography variant="h4" align="center">
+                Join us for worship and fellowship!
+              </Typography>
               <br />
-              <Typography variant='h6' align='center'>Each Sunday at 3pm EST</Typography>
-              <Typography variant='h6' align='center'>At the Troutman Event Center!</Typography><br />
-              <Typography variant='body1' align='center'>105 N Main St Troutman, NC 28166</Typography>
-              <Typography variant='body1' align='center'>Troutman, NC 28166</Typography>
-
+              <Typography variant="h6" align="center">
+                Each Sunday at 3pm EST
+              </Typography>
+              <Typography variant="h6" align="center">
+                At the Troutman Event Center!
+              </Typography>
+              <br />
+              <Typography variant="body1" align="center">
+                105 N Main St Troutman, NC 28166
+              </Typography>
+              <Typography variant="body1" align="center">
+                Troutman, NC 28166
+              </Typography>
             </CardContent>
           </Card>
         </Grid>

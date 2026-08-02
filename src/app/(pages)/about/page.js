@@ -12,6 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
+import Photos from "@/constants";
+const aboutImage = Photos.about.mainImage;
 
 const Page = () => {
   return (
@@ -28,21 +30,31 @@ const Page = () => {
             textAlign="center"
           >{`About ${themeConfig.appName}`}</Typography>
         </Grid>
-        <Grid size={12}>
-          <Box
-            sx={{
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/friends.jpg)`,
-              height: '80vw',
-              maxHeight: '700px',
-              width: '100%',
-              backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'top',
-              backgroundPositionX: 'center',
-              backgroundSize: '100%',
-              borderRadius: '2px',
-              objectFit: 'cover'
-            }}
-          />
+        <Grid size={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <picture>
+            <source
+              type="image/avif"
+              srcSet={aboutImage.avif.set}
+              // sizes="(max-width: 600px) 90v, 800px"
+            />
+            <source
+              type="image/webp"
+              srcSet={aboutImage.webp.set}
+              // sizes="(max-width: 600px) 90v, 800px"
+            />
+            <img
+              src={aboutImage.jpg}
+              style={{
+                height: '80vw',
+                maxHeight: '700px',
+                width: 'auto',
+                borderRadius: '2px',
+              }}
+              alt={aboutImage.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
         </Grid>
         <Card component={Grid} size={12}>
           <CardHeader

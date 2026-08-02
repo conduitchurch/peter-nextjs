@@ -50,18 +50,13 @@ const PrayerTabs = () => {
               </ListItem>
               <ListItem>
                 <NextLink
-                  href='https://live.churchofthehighlands.com/'
+                  href="https://live.churchofthehighlands.com/"
                   target="_blank"
-                  title='Fellowship Live (7am - 8amEST)'
+                  title="Fellowship Live (7am - 8amEST)"
                 >
-                <Button
-                  variant="contained"
-                  size="small"
-                  endIcon={<Launch />}
-                  
-                >
-                  Fellowship Live
-                </Button>
+                  <Button variant="contained" size="small" endIcon={<Launch />}>
+                    Fellowship Remotely
+                  </Button>
                 </NextLink>
               </ListItem>
               <ListItem>
@@ -100,31 +95,56 @@ const PrayerTabs = () => {
       </Grid>
       <Grid size={{ sm: 12, md: 9 }}>
         {tab === 0 && (
-          <Card>
-            <CardHeader title="Prayer is our first response, not our last resort." />
-            <CardContent>
-              <Typography>
-                We, along side churches across America, have set aside 21 days
-                to intentionally seek God in prayer and believe for Him to move
-                in powerful ways.
-              </Typography>
-              <Divider />
-              <Typography>
-                Each morning, we dedicate an hour for personal prayer time, and
-                worship. During this time, we will be able to fellowship online
-                with Church of the Highlands, in Alabama.
-              </Typography>
-              <Divider />
-              <Typography>
-                We would love for you to take part in 21 Days of Prayer!
-              </Typography>
-            </CardContent>
-          </Card>
+          <>
+            <Card>
+              <CardHeader title="Prayer is our first response, not our last resort." />
+              <CardContent>
+                <Typography>
+                  We, along side churches across America, have set aside 21 days
+                  to intentionally seek God in prayer and believe for Him to
+                  move in powerful ways.
+                </Typography>
+                <Divider />
+                <Typography>
+                  Each morning, we dedicate an hour for personal prayer time,
+                  and worship. During this time, we will be able to fellowship
+                  online with Church of the Highlands, in Alabama.
+                </Typography>
+                <Divider />
+                <Typography>
+                  We would love for you to take part in 21 Days of Prayer!
+                </Typography>
+              </CardContent>
+            </Card>
+            <br />
+            <Card>
+              <CardHeader title="In-Person Prayer and Devotion" />
+              <CardContent>
+                <Typography>
+                  Weekdays at 6:30am EST, join believers at the Troutman
+                  Pavilion for 30 minutes of prayer, devotion, and coffee!
+                </Typography>
+                <Typography>August 3rd - 7th, 10th - 24th, and 17 - 21st, Rain or Shine</Typography>
+                <Divider />
+                <Typography>
+                  Saturdays at 9:30am EST, a time of worship, prayer and fellowship at the Lake Norman State Park!
+                </Typography>
+                <Typography>August 8th, 15th, and 22nd, Rain or Shine</Typography>
+              </CardContent>
+            </Card>
+          </>
         )}
         {tab === 1 && (
           <Card>
-            <CardHeader title="Fellowship Online" subheader="With Church of the Highlands in Alabama!" />
-            <CardContent component='iframe' src="https://21days.churchofthehighlands.com/media" height={800}/>
+            <CardHeader
+              title="Fellowship Online"
+              subheader="With Church of the Highlands in Alabama!"
+            />
+            <CardContent
+              component="iframe"
+              src="https://21days.churchofthehighlands.com/media"
+              height={800}
+            />
           </Card>
         )}
         {tab === 2 && (

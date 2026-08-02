@@ -14,7 +14,9 @@ import {
   Typography,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
-import PrayerTabs from './components/PrayerTabs'
+import PrayerTabs from "./components/PrayerTabs";
+import Photos from "@/constants";
+const prayerImage = Photos.pray.mainImage;
 
 const Page = () => {
   return (
@@ -27,32 +29,52 @@ const Page = () => {
       >
         <Grid size={12}>
           <Typography variant="h2" textAlign="center">
-            21 Days of Prayer & Fasting
+            21 Days of Prayer
           </Typography>
         </Grid>
         <Grid size={12}>
           <Typography variant="h4" textAlign="center">
-            January 4th, 2026 - January 24th, 2026
+            August 2nd, 2026 - August 22nd, 2026
           </Typography>
           <br />
         </Grid>
         <Grid size={12}>
-          <Box
+          <Grid
+            size={12}
             sx={{
-              backgroundImage: 'url(https://cdn.sanity.io/images/2uj21qja/production/3d5a5bf900f9095c70de86b3a87bc23f6acf515b-2250x2250.jpg)',
-              height: '80vw',
-              maxHeight: '700px',
-              width: '100%',
-              backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'center',
-              backgroundPositionX: 'center',
-              backgroundSize: '100%',
-              borderRadius: '2px',
-              objectFit: 'cover'
-            }} />
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={prayerImage.avif.set}
+                // sizes="(max-width: 600px) 90v, 800px"
+              />
+              <source
+                type="image/webp"
+                srcSet={prayerImage.webp.set}
+                // sizes="(max-width: 600px) 90v, 800px"
+              />
+              <img
+                src={prayerImage.jpg}
+                style={{
+                  height: "80vw",
+                  maxHeight: "700px",
+                  width: "auto",
+                  borderRadius: "2px",
+                }}
+                alt={prayerImage.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </Grid>
         </Grid>
         <Grid size={12}>
-            <PrayerTabs />
+          <PrayerTabs />
         </Grid>
       </Grid>
     </Grid>

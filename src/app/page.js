@@ -1,6 +1,5 @@
-"use client";
 
-import Carousel from "@/@core/components/Carousel";
+import Carousel from "@/@core/components/CarouselOptimized";
 import {
   Card,
   CardActions,
@@ -12,41 +11,23 @@ import {
   Paper,
   styled,
   Box,
-  useTheme,
-  useMediaQuery
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
 import Head from "next/head";
 import NextLink from "next/link";
 
-const Slide = styled("img")(({ theme }) => ({
-  height: "auto",
-  width: "100%",
-  objectFit: "cover",
-  maxHeight: '70vh'
-}));
+import Photos from "@/constants";
+
+const pastorImage = Photos.index.pastorImage;
+const slides = Photos.index.slides;
 
 const Home = () => {
 
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <>
       <Grid container padding={0} rowSpacing={5} columnSpacing={0}>
-        <Grid size={12} marginTop={isMobile ? 10 : null}>
-          <Carousel
-            slides={[
-              <Slide src="images/church_2.jpg" style={{ objectPosition: '50% 30%' }} />,
-              <Slide src="images/worship_1.jpg" style={{ objectPosition: '50% 0%' }} />,
-              <Slide src="images/kids_min_3.jpg" style={{ objectPosition: '50% 25%' }} />,
-              <Slide src="images/church_1.jpg" style={{ objectPosition: '50% 30%' }} />,
-              <Slide src="images/praise_2.jpg" style={{ objectPosition: '50% 20%' }} />,
-              <Slide src="images/sermon_1.jpg" style={{ objectPosition: '50% 30%' }} />,
-              <Slide src="images/family.jpg" style={{ objectPosition: '50% 30%' }} />,
-              <Slide src="images/praise_1.jpg" style={{ objectPosition: '50% 5%' }} />,
-              <Slide src="images/sermon_2.jpg" style={{ objectPosition: '50% 60%' }} />,
-            ]}
-          />
+        <Grid size={12}>
+          <Carousel slides={slides} randomize />
         </Grid>
         <Grid size={10} offset={1} sx={{ zIndex: 1 }}>
           <Grid container spacing={3} alignItems="stretch">
@@ -124,11 +105,30 @@ const Home = () => {
               }}
             >
               <Box sx={{ height: 300, width: 300, overflow: 'hidden' }}>
-                <img
+                {/* <img
                   src={`${nextConfig.assetPrefix}/images/pastor.jpg`}
                   alt="Preaching"
                   style={{ height: '150%', width: 'auto', marginLeft: '-53%', marginTop: '-20%' }}
-                />
+                /> */}
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcSet={pastorImage.avif.set}
+                    // sizes="(max-width: 600px) 90v, 800px"
+                  />
+                  <source
+                    type="image/webp"
+                    srcSet={pastorImage.webp.set}
+                    // sizes="(max-width: 600px) 90v, 800px"
+                  />
+                  <img
+                    src={pastorImage.jpg}
+                    style={{ height: '150%', width: 'auto', marginLeft: '-53%', marginTop: '-20%' }}
+                    alt={pastorImage.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </Box>
             </Grid>
             <Grid

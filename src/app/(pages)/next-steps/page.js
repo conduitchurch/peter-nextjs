@@ -12,6 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 import nextConfig from "next.config.mjs";
+import Photos from "@/constants";
+const nextStepsImage = Photos.nextSteps.mainImage;
 
 const Page = () => {
   return (
@@ -27,22 +29,32 @@ const Page = () => {
             Next Steps
           </Typography>
         </Grid>
-        <Grid size={12}>
-          <Box
-            sx={{
-              backgroundImage: `url(${nextConfig.assetPrefix}/images/serve_team.jpg)`,
-              height: '80vw',
-              maxHeight: '700px',
-              width: '100%',
-              backgroundRepeat: 'no-repeat',
-              backgroundPositionY: 'top',
-              backgroundPositionX: 'center',
-              backgroundSize: '100%',
-              borderRadius: '2px',
-              objectFit: 'cover'
-            }}
-          />
-        </Grid>
+                <Grid size={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcSet={nextStepsImage.avif.set}
+                      // sizes="(max-width: 600px) 90v, 800px"
+                    />
+                    <source
+                      type="image/webp"
+                      srcSet={nextStepsImage.webp.set}
+                      // sizes="(max-width: 600px) 90v, 800px"
+                    />
+                    <img
+                      src={nextStepsImage.jpg}
+                      style={{
+                        height: '80vw',
+                        maxHeight: '700px',
+                        width: 'auto',
+                        borderRadius: '2px',
+                      }}
+                      alt={nextStepsImage.alt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
+                </Grid>
         <Grid size={{ xs: 12, md: 8 }} offset={{ xs: 0, md: 2 }}>
           <Typography variant="h6" textAlign="center">
             Are you ready to step out in faith?
